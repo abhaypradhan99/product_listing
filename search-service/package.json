@@ -1,0 +1,9 @@
+{
+  "name": "search-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@elastic/elasticsearch": "^9.1.1",
+    "express": "^5.1.0"
+  }
+}
