@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/products';
-mongoose.connect(mongoUri).then(() => console.log('MongoDB connected').catch(err => console.error('MongoDB connection error:', err)));
+mongoose.connect(mongoUri).then(() => console.log('MongoDB connected')).catch(err => console.error('MongoDB connection error:', err));
 const redisClient = redis.createClient({host: process.env.REDIS_HOST || 'localhost', port: process.env.REDIS_PORT || 6379});
 redisClient.on('error', (err) => console.error('Redis error:', err));
 
